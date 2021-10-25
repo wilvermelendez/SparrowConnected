@@ -1,0 +1,24 @@
+{
+  "name": "sparrow-connected",
+  "version": "1.0.0",
+  "description": "Sparrow Connected Application",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build -w packages/shared -w packages/api -w packages/ui",
+    "restoreWorkspaces": "npm run restoreWorkspaces -w packages/shared -w packages/api -w packages/ui && rm -rf node_modules/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilvermelendez/SparrowConnected.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilvermelendez/SparrowConnected/issues"
+  },
+  "homepage": "https://github.com/wilvermelendez/SparrowConnected#readme",
+  "workspaces": [
+    "packages/*"
+  ]
+}
