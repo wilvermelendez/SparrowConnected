@@ -1,12 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "include": ["./**/*.ts", "index.ts"],
+  "exclude": ["./node_modules"],
   "compilerOptions": {
     "composite": true, // allows 'shared' to be referenced from the outside,
     "declaration": true, // generates corresponding .d.ts files
     "declarationMap": true, // generates sourcemap for each corresponding .d.ts file.,
     "outDir": "dist",
     "baseUrl": "types",
-    "rootDir": "."
+    "rootDir": ".",
+    "allowJs": true
   }
 }

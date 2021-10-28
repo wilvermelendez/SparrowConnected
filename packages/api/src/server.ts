@@ -2,11 +2,12 @@ import http from 'http'
 import express from 'express'
 import config from './config/config'
 import logging from './config/logging'
-import { connect } from 'mongoose'
-
+import postRoutes from './routes/post'
+import { connectToDb } from './startup/db'
 const NAMESPACE = 'Server'
 const app = express()
 
+connectToDb()
 /** Log the request */
 app.use((req, res, next) => {
   /** Log the req */
@@ -46,7 +47,7 @@ app.use((req, res, next) => {
 })
 
 /** Routes go here */
-// router.use('/api/books', bookRoutes);
+app.use('/api', postRoutes)
 
 /** Error handling */
 app.use((req, res, next) => {

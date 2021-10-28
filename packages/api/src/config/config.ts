@@ -20,7 +20,8 @@ const MONGO = {
   password: MONGO_PASSWORD,
   username: MONGO_USERNAME,
   options: MONGO_OPTIONS,
-  url: `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST}`
+  // url: `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST}`
+  url: `mongodb://${MONGO_HOST}`
 }
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost'

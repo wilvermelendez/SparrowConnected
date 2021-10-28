@@ -1,17 +1,18 @@
 {
   "name": "sparrow-connected-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx tsc &&  nodemon src/server.ts",
+    "db-start": "docker-compose up -d",
+    "restoreWorkspaces": "rm -rf node_modules && rm -f package-lock.json"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Wilver Melendez",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@types/mongoose": "^5.11.97",
-    "eslint": "^8.1.0",
     "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"

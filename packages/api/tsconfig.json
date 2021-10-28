@@ -1,11 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": ".",
     "allowJs": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true
-  }
-  // "references": [{ "path": "../shared" }]
+    "esModuleInterop": true
+  },
+  "references": [{ "path": "../shared" }]
 }
