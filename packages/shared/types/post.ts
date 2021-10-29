@@ -1,11 +1,16 @@
 import { PostTypes } from "../enums/PostTypes";
 
 export interface IPost {
+  __id: string;
   title: string;
   summary: string;
   body: string;
   author: string;
-  publishedUser: string;
+  publishedUser: {
+    name: String;
+    lastName: String;
+    image: { data: Buffer; contentType: String };
+  };
   publicationDate: Date;
   expirationDate: Date;
   lastModifyDate: Date;

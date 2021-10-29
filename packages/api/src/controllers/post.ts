@@ -16,18 +16,21 @@ export const getAllPost = async (req: Request, res: Response) => {
 
 export const createPost = async (req: Request, res: Response) => {
   try {
+    // const { error } = validatePost(req.body)
+    // if (error) return res.status(StatusCodes.BAD_REQUEST).send(error.details[0].message)
+
     const newPost = new Post({
-      title: 'test',
-      summary: 'test',
-      body: 'test',
-      publishedUser: 'test',
-      author: 'test',
-      userPublisher: 'test',
+      title: req.body.title,
+      summary: req.body.summary,
+      body: req.body.body,
+      author: req.body.author,
+      publishedUser: req.body.publishedUser,
       publicationDate: Date.now(),
       expirationDate: Date.now(),
       lastModifyDate: Date.now(),
-      topics: 'test',
-      postType: 0
+      topics: req.body.topics,
+      postType: req.body.postType,
+      headImage: req.body?.headImage ?? null
     })
     const post = await newPost.save()
     return res.status(StatusCodes.OK).json({ post: post })

@@ -1,6 +1,6 @@
 export enum PostTypes {
-  standard,
-  mandatory,
-  compliance,
-  public
+  standard = "standard",
+  mandatory = "mandatory",
+  compliance = "compliance",
+  public = "public"
 }
