@@ -3,6 +3,7 @@ import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import { MenuItem } from '@mui/material'
 import { PostTypes } from 'sparrow-connected-shared'
+import { FullWidthTextField } from '../SharedComponents/FullWidthTextField/FullWidthTextField'
 
 export const PostForm = () => {
   const [title, setTitle] = useState()
@@ -20,8 +21,7 @@ export const PostForm = () => {
       noValidate
       autoComplete="off">
       <div>
-        <TextField value={title} required fullWidth label="Title" variant="standard" />
-        <TextField value={title} required label="Author" variant="standard" />
+        <FullWidthTextField label="fullWidth"></FullWidthTextField>
       </div>
       <div>
         <TextField

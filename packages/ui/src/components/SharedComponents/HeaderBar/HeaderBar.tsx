@@ -14,7 +14,7 @@ export const HeaderBar = () => {
           <IconButton
             size="large"
             edge="start"
-            color="primary"
+            color="secondary"
             aria-label="menu"
             sx={{ mr: 2 }}></IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

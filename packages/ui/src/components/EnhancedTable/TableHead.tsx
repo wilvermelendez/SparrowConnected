@@ -19,7 +19,7 @@ export const EnhancedTableHead = ({
       <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
-            color="primary"
+            color="secondary"
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}

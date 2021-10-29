@@ -17,7 +17,7 @@ import moment from 'moment'
 // This method is created for cross-browser compatibility, if you don't
 // need to support IE11, you can use Array.prototype.sort() directly
 
-export const EnhancedTable = ({ rows, headCells }) => {
+export const EnhancedTable = ({ tableTitle, rows, headCells }) => {
   const [order, setOrder] = useState<Order>('asc')
   const [orderBy, setOrderBy] = useState<keyof PostTable>()
   const [selected, setSelected] = useState<readonly string[]>([])
@@ -76,7 +76,7 @@ export const EnhancedTable = ({ rows, headCells }) => {
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
-        <EnhancedTableToolbar numSelected={selected.length} />
+        <EnhancedTableToolbar numSelected={selected.length} tableTitle={tableTitle} />
         <TableContainer>
           <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size={'medium'}>
             <EnhancedTableHead
@@ -113,7 +113,7 @@ export const EnhancedTable = ({ rows, headCells }) => {
                         selected={isItemSelected}>
                         <TableCell padding="checkbox">
                           <Checkbox
-                            color="primary"
+                            color="secondary"
                             checked={isItemSelected}
                             inputProps={{
                               'aria-labelledby': labelId
@@ -121,7 +121,7 @@ export const EnhancedTable = ({ rows, headCells }) => {
                           />
                         </TableCell>
                         <TableCell component="th" id={labelId} scope="row" padding="none">
-                          {row.title}
+                          {row.title.slice(0, 30)}
                         </TableCell>
                         <TableCell align="right">{row.postType}</TableCell>
                         <TableCell align="right">

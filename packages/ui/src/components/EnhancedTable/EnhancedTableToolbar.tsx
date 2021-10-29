@@ -4,7 +4,7 @@ import Tooltip from '@mui/material/Tooltip'
 import IconButton from '@mui/material/IconButton'
 import { alpha } from '@mui/material/styles'
 
-export const EnhancedTableToolbar = ({ numSelected }) => {
+export const EnhancedTableToolbar = ({ numSelected, tableTitle }) => {
   return (
     <Toolbar
       sx={{
@@ -21,7 +21,7 @@ export const EnhancedTableToolbar = ({ numSelected }) => {
         </Typography>
       ) : (
         <Typography sx={{ flex: '1 1 100%' }} variant="h6" id="tableTitle" component="div">
-          Nutrition
+          {tableTitle}
         </Typography>
       )}
       {numSelected > 0 ? (
