@@ -121,7 +121,7 @@ export const EnhancedTable = ({ tableTitle, rows, headCells }) => {
                           />
                         </TableCell>
                         <TableCell component="th" id={labelId} scope="row" padding="none">
-                          {row.title.slice(0, 30)}
+                          {row?.title?.slice(0, 30)}
                         </TableCell>
                         <TableCell align="right">{row.postType}</TableCell>
                         <TableCell align="right">

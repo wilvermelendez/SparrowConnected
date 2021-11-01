@@ -1,7 +1,6 @@
 import { PostTypes } from "../enums/PostTypes";
 
 export interface IPost {
-  __id: string;
   title: string;
   summary: string;
   body: string;

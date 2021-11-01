@@ -17,7 +17,6 @@ const usePostStore = create<State>((set, get) => ({
       set({ usersLoading: true })
 
       const posts = await getPosts()
-      console.log('Getting posts', posts)
       set({
         posts: posts
       })

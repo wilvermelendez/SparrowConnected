@@ -1,5 +1,4 @@
 import AllInboxIcon from '@mui/icons-material/AllInbox'
-import GavelIcon from '@mui/icons-material/Gavel'
 import PostAddIcon from '@mui/icons-material/PostAdd'
 import PeopleIcon from '@mui/icons-material/People'
 import CreateIcon from '@mui/icons-material/Create'
@@ -15,11 +14,6 @@ export const routesPosts: Routes[] = [
     path: '/',
     sidebarName: 'Post',
     itemIcon: <AllInboxIcon />
-  },
-  {
-    path: '/compliance',
-    sidebarName: 'Compliance post',
-    itemIcon: <GavelIcon />
   },
   {
     path: '/post',

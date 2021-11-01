@@ -132,7 +132,7 @@ export default function NavigationBar({ routes, adminRoutes }) {
         <Divider />
         <List>
           {routes.map((route: Routes, index) => (
-            <Tooltip title={route.sidebarName} placement="right">
+            <Tooltip title={route.sidebarName} key={index} placement="right">
               <ListItem
                 button
                 key={route.path}
@@ -149,7 +149,7 @@ export default function NavigationBar({ routes, adminRoutes }) {
         <Divider />
         <List>
           {adminRoutes.map((route: Routes, index) => (
-            <Tooltip title={route.sidebarName} placement="right">
+            <Tooltip title={route.sidebarName} key={index} placement="right">
               <ListItem
                 key={route.path}
                 component={forwardRef((props: NavLinkProps, ref: any) => (
