@@ -6,6 +6,7 @@
     "build": "npx tsc",
     "start": "npx tsc &&  nodemon src/server.ts",
     "db-start": "docker-compose up -d",
+    "db-populate":"npx ts-node src/seedDatabase/seed.ts",
     "restoreWorkspaces": "rm -rf node_modules && rm -f package-lock.json"
   },
   "keywords": [],

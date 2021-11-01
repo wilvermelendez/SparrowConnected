@@ -2,7 +2,13 @@ import { Autocomplete, Button, TextField, Grid } from '@mui/material'
 import { PostTypes } from 'sparrow-connected-shared'
 import { MoreFiltersDialog } from '../MoreFiltersDialog/MoreFiltersDialog'
 
-export const Filters = ({ authors, setTypeFilter, setAuthorFilter }) => {
+export const Filters = ({
+  authors,
+  setTypeFilter,
+  setAuthorFilter,
+  setTitleFilter,
+  setTopicsFilter
+}) => {
   const handleAuthorChange = (events, value) => {
     setAuthorFilter(value)
   }
@@ -32,8 +38,8 @@ export const Filters = ({ authors, setTypeFilter, setAuthorFilter }) => {
       <Grid item xs={12} sm={12} md={4}>
         <MoreFiltersDialog
           authors={authors}
-          setTypeFilter={setTypeFilter}
-          setAuthorFilter={setAuthorFilter}
+          setTitleFilter={setTitleFilter}
+          setTopicsFilter={setTopicsFilter}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4}></Grid>

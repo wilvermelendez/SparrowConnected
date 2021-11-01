@@ -7,6 +7,7 @@
     "start:api": "npm run start -w packages/api",
     "start:ui": "npm run start -w packages/ui",
     "db-start": "npm run db-start -w packages/api",
+    "db-populate": "npm run db-populate-w packages/api",
     "build": "npm run build -w packages/shared -w packages/api -w packages/ui",
     "restoreWorkspaces": "npm run restoreWorkspaces -w packages/shared -w packages/api -w packages/ui && rm -rf node_modules/",
     "test": "echo \"Error: no test specified\" && exit 1"

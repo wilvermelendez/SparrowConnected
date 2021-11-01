@@ -7,13 +7,12 @@ import {
   Stack,
   DialogTitle,
   Dialog,
-  DialogActions,
   DialogContent
 } from '@mui/material'
 import { PostTypes } from 'sparrow-connected-shared'
 import { DatePicker, LocalizationProvider } from '@mui/lab'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
-export const MoreFiltersDialog = ({ authors, setTypeFilter, setAuthorFilter }) => {
+export const MoreFiltersDialog = ({ authors, setTitleFilter, setTopicsFilter }) => {
   const [open, setOpen] = useState(false)
   const [value, setValue] = useState<Date | null>(null)
   const handleClickOpen = () => {
@@ -23,11 +22,11 @@ export const MoreFiltersDialog = ({ authors, setTypeFilter, setAuthorFilter }) =
   const handleClose = () => {
     setOpen(false)
   }
-  const handleAuthorChange = (events, value) => {
-    setAuthorFilter(value)
+  const handleTitleChange = (events, value) => {
+    setTitleFilter(value)
   }
-  const handleTypeChange = (events, value) => {
-    setTypeFilter(value)
+  const handleTopicChange = (events, value) => {
+    setTopicsFilter(value)
   }
 
   return (
@@ -52,7 +51,7 @@ export const MoreFiltersDialog = ({ authors, setTypeFilter, setAuthorFilter }) =
                 id="free-solo-demo"
                 freeSolo
                 options={authors}
-                onChange={handleAuthorChange}
+                onChange={handleTitleChange}
                 renderInput={(params) => <TextField {...params} label="Title" />}
               />
             </Grid>
@@ -60,7 +59,7 @@ export const MoreFiltersDialog = ({ authors, setTypeFilter, setAuthorFilter }) =
               <Autocomplete
                 id="free-solo-demo"
                 freeSolo
-                onChange={handleTypeChange}
+                onChange={handleTopicChange}
                 options={Object.values(PostTypes).map((option) => option)}
                 renderInput={(params) => <TextField {...params} label="Topic" />}
               />

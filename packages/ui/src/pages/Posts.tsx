@@ -12,6 +12,8 @@ export const Posts = () => {
   const [authors, setAuthors] = useState([])
   const [authorFilter, setAuthorFilter] = useState()
   const [typeFilter, setTypeFilter] = useState()
+  const [titleFilter, setTitleFilter] = useState()
+  const [topicsFilter, setTopicsFilter] = useState()
 
   useEffect(() => {
     getPost()
@@ -50,7 +52,13 @@ export const Posts = () => {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Filters authors={authors} setTypeFilter={setTypeFilter} setAuthorFilter={setAuthorFilter} />
+      <Filters
+        authors={authors}
+        setTypeFilter={setTypeFilter}
+        setAuthorFilter={setAuthorFilter}
+        setTitleFilter={setTitleFilter}
+        setTopicsFilter={setTopicsFilter}
+      />
       <EnhancedTable tableTitle="Posts" rows={filteredPosts} headCells={headCells}></EnhancedTable>
     </Box>
   )

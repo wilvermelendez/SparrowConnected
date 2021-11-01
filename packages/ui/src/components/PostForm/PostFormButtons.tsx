@@ -9,13 +9,13 @@ export const PostFormButtons = ({ createPost }) => {
         </Button>
       </Grid>
       <Grid item xs={12} sm={4} md={4}>
-        <Button fullWidth disabled variant="outlined">
+        <Button fullWidth variant="outlined">
           Save draf
         </Button>
       </Grid>
 
       <Grid item xs={12} sm={4} md={4}>
-        <Button fullWidth disabled variant="outlined">
+        <Button fullWidth variant="outlined">
           Cancel
         </Button>
       </Grid>
